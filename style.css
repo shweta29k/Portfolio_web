@@ -1,0 +1,481 @@
+*{
+    margin: 0px;
+    margin-top:0px;
+    padding: 0px;
+    padding-top: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* background-color: rgb(243, 235, 235); */
+    
+}
+
+.home-page{
+    /* height:100vh; */
+    overflow-x: hidden;
+    perspective: 10px;
+    /* background-color:  rgb(242, 227, 227); */
+    background-color:  rgb(245, 240, 240);
+}
+
+
+/*home*/
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 7px;
+    margin-left:2px;
+    /* padding-left:8%;
+    padding-right: 8%; */
+    width:100%;
+    background-color: rgb(248, 241, 241);
+    position: fixed;
+    z-index:100;
+    
+
+    opacity: 0;
+  transform: translateY(-50px);
+  animation: slideDown 1s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes slideDown {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.container h1{
+    
+    padding-left: 25px;
+    color:rgb(46, 67, 84);
+    letter-spacing: 10px;
+    cursor: pointer;
+    font-size: 50px;
+    opacity:0;
+    animation:slideRight 1s ease forwards;
+    animation-delay: calc(.3s* var(--i));
+    transition:0.7s ease;
+
+    
+  
+}
+
+
+span{
+    color: #e533a7;
+}
+.header{
+    display: flex;
+    gap:30px;
+}
+
+.header ul {
+    display: inline-block;
+    padding: 10px 10px;
+    
+
+}
+
+
+
+
+.header ul a{
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 20px;
+    opacity:0;
+    transition:0.5s ease;
+    animation:slideRight 1s ease forwards;
+    animation-delay: calc(.2s* var(--i));
+    
+}
+ 
+
+.header ul a:hover{
+    color:#e533a7;
+    transition: 0.4s;
+} 
+
+
+
+img{
+    margin-top:-20px;
+    height: 20rem;
+    width:18rem;
+    border-radius: 150px;
+    animation:slideRight 1s ease forwards;
+    animation-delay: calc(.2s* var(--i));
+
+    /* box-shadow: 10px 10px 10px 10px rgb(201, 140, 151); */
+}
+
+.homepage
+{
+   margin-top: 100px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    font-size:2rem; 
+
+    opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.5s;
+}
+@keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.intro,.profession{
+    font-size: 20px;
+    letter-spacing: 2px;
+    color:rgb(58, 57, 57);
+}
+.me{
+    font-size: 30px;
+    letter-spacing: 3px;
+    color:rgb(58, 57, 57);
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+
+}
+
+.btn{
+    
+    background-color: rgb(220, 205, 205);
+    color: #e533a7;
+     padding:9px 30px; 
+    font-size: 17px;
+    border: 2px solid #e590c7 ;
+    border-radius: 3rem ;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.4s; 
+    box-shadow:0 0 5px pink ,0 0 5px pink;
+}
+.btn:hover{
+    transform: scale(1.1);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/*about me*/
+
+.aboutMe{
+    background-color: rgb(229, 209, 209);
+
+    opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+.head-aboutme{
+
+    text-align: center;
+    padding-top:75px;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+.about{
+    display: flex;
+    gap:20px;
+    justify-content:center;
+    align-items:flex-start;
+    padding:50px;
+    padding-bottom:20px;
+    
+}
+
+#img1{
+    height:26rem;
+    width:20rem;
+    border-radius: 4px;
+    border-width: 30px;
+    border-color: #e533a7;
+    box-shadow: 10px 10px 10px 10px rgb(208, 197, 199);
+}
+.about-sec{
+    padding: 50px;
+    padding-top: 10px;
+}
+
+.info{
+    /* color:rgb(58, 57, 57);
+    letter-spacing: 1px;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 20px;
+    border: 4px solid rgb(195, 183, 183);
+    border-style:double ; */
+    padding: 50px;
+    color:rgb(11, 11, 11);
+    letter-spacing: 1px;
+    font-size: 20px;
+    line-height: 24px;
+    background-color: rgb(238, 237, 237);
+    border-radius: 30px;
+}
+
+.head-skills{
+    
+    padding-bottom: 10px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    padding-top: 30px;
+}
+.skills button{
+    font-size: 20px;
+    color:rgb(58, 57, 57);
+    letter-spacing: 2px;
+    padding:10px;
+    margin:5px;
+    border-radius: 20px;
+    border-color:2
+    px solid rgb(101, 50, 59);
+    
+}
+
+
+/* education*/
+
+.head-edu{
+    padding-bottom: 10px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    padding: 20px;
+    padding-left: 0px;
+}
+
+.edu{
+   display: flex; 
+}
+.edu-fir{
+    border-left: 6px solid rgb(107, 101, 101);
+  height: 230px;
+}
+.edu-sec{
+    padding-left: 10px;
+}
+/* .content-card {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    line-height: 30px;
+    border: 4px solid rgb(195, 183, 183);
+    border-style:double ;
+  } */
+
+/* .timeline {
+    position: relative;
+  }
+  
+  .timeline::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    top: 55px; 
+    height: calc(100% - 100px);
+    background-color: var(--accent-color);
+    z-index: 100;
+  }
+  
+
+
+  .timeline-date {
+    position: relative;
+  }
+  
+  .timeline-date::before {
+    content: "";
+    position: absolute;
+    background-color: var(--accent-color);
+    left: -25px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  
+  .timeline-items {
+    margin-left: 20px;
+  }
+  
+  .timeline-item {
+    margin: 50px 0;
+  }
+ */
+
+/*projects*/
+
+.projects{
+    padding-top:30px;
+    padding-bottom: 60px;
+    /* background-color:  rgb(243, 235, 235); */
+    background-color:  rgb(245, 240, 240);
+}
+.head-project{
+    /* padding-bottom: 10px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    padding-top: 10px; 
+    display: flex;
+    justify-content: center; */
+    font-size: 45px;
+    letter-spacing: 2px;
+    padding: 20px;
+    
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+.project-info{
+    display: flex;
+    gap:40px;
+    padding:40px;
+    padding-bottom: 0px;
+    
+
+}
+.naari-img{
+    padding-left: 10px;
+    height:15rem;
+    width:15rem;
+}
+.naari-info{
+    width:70%;
+    padding: 50px;
+    color:rgb(11, 11, 11);
+    letter-spacing: 1px;
+    font-size: 20px;
+    line-height: 24px;
+    background-color: rgb(193, 178, 178);
+    border-radius: 30px;
+    
+}
+
+
+/*position*/
+
+.por{
+    /* margin:40px; */
+  margin-top:10px;
+  /* margin-bottom:0px; */
+  /* background-color: rgb(232, 212, 212);
+   */
+   background-color: rgb(229, 209, 209);
+}
+.pos-name{
+    font-size: 20px;
+    
+}
+.head-por{
+   
+    font-size: 35px;
+    letter-spacing: 2px;
+    padding: 20px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.my-position{
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    
+}
+.pos-name{
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+.work-section{
+    display: flex;
+    padding-bottom: 25px;
+}
+.work-fir{
+    /* border: 6px solid rgb(107, 101, 101);
+    height: 130px; */
+}
+.work-sec{
+    border:4px solid rgb(176, 170, 170);
+    line-height: 40px;
+    font-size: 22px;
+    padding-left: 20px;
+    
+    
+} 
+.achievements{
+    /* background-color: rgb(243,235,235); */
+    background-color:  rgb(244, 237, 237);
+}
+.head-achiev{
+   
+    font-size: 35px;
+    letter-spacing: 2px;
+    padding: 10px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.achievement-list{
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    align-items:self-start;
+    line-height: 40px;
+    font-size: 20px;
+    padding:20px;
+    padding-left: 100px;
+    
+}
+.achievement-list p{
+    background-color: rgb(249, 244, 244);
+}
+
+@keyframes slideRight{
+    0%{
+        tranform:translateX(-100px);
+        opacity:0;
+    }
+    100%{
+        tranform:translateX(0px);
+         opacity:1;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        tranform:translateX(100px);
+        opacity:0;
+    }
+    100%{
+        tranform:translateX(0px);
+         opacity:1;
+    }
+}
